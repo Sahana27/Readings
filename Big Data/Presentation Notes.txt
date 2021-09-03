@@ -1,0 +1,102 @@
+APACHE PIG:
+Pig is a open-source library in two parts: 
+=>High-level data flow language called PigLatin, 
+  plus an engine that parses, optimizes, and automatically executes PigLatin scripts
+  as a series of MapReduce jobs on a Hadoop cluster
+=>Pig allows users to integrate code written in Java, Python, Jython, and
+  other languages, providing extensive flexibility and use of specialized libraries.
+=>Pig users such as Netflix, LinkedIn, Twitter, Salesforce, and Stanford University.
+
+Salient proprerty of PIG:
+=>Parallelization
+=>Handle large amount of Data
+
+Pig's Infrastructure
+=>Compiler that produces sequences of Map-Reduce programs.
+=>Consists of Textual language - Pig Latin
+
+PIG LATIN HAS FOLLOWING KEY PROPERTIES:
+=>EASE OF PROGRAMMING:Parallel Programming for simple problem is easy. 
+  Complex task needs  multiple transformation explicitly encoded as data flow sequences, 
+  making them easy to write, understand, and maintain.
+
+=>OPTIMIZATION OPPORTUNITIES:Tasks are encoded permits the system to optimize their execution automatically
+
+=>EXTENSIBILITY: Can Create their own function to do special purpose processing.
+
+EXECUTION MODE:
+Local :
+       Used to verify and debug Pig queries and/or scripts on smaller datasets which a single machine could handle.
+	   It runs on a single JVM and access the local filesystem
+	   pig -x local
+
+Map Reduce Mode :
+                  Pig translates the queries into MapReduce jobs and runs the job on the hadoop cluster. 
+				  This cluster can be pseudo- or fully distributed cluster.
+				  pig OR pig -x mapreduce
+				  First check the compatibility of the Pig and Hadoop versions being used.
+				  Firstly- export the variable PIG_CLASSPATH to add Hadoop conf directory.
+				  export PIG_CLASSPATH=$HADOOP_HOME/conf/
+				  pig
+				  
+
+INTERACTIVE MODE:
+				 Run Pig in interactive mode using the Grunt shell. Invoke the Grunt shell using the "pig" command
+				 Enter your Pig Latin statements and Pig commands interactively at the command line.
+
+BATCH MODE :
+			Run Pig in batch mode using Pig scripts and the "pig" command.
+
+PIG SCRIPT :
+			Use Pig scripts to place Pig Latin statements and Pig commands in a single file. While not required, it is good practice to identify the file using the *.pig extension.Run Pig scripts from the command line and from the Grunt shell.
+
+Comments in Scripts:
+					 multi-line comments use /* …. */
+					 single-line comments use --
+
+PIG LATIN STATEMENT :
+					 Basic construct used to process data
+					 Pig latin, takes one relation as input and produces another form as output-Except to LOAD and STORE (which reads and stores data)
+					 Pig Latin can span multiple line, but has to be separated by semicolon
+
+GENERAL ORGANISATION OF PIG LATIN :
+									LOAD statement - to read data from file system
+									TRANSFORMATION statement -process the data
+									DUMP- to view the result / STORE - save the result
+									DUMP or STORE statement is required to generate output.
+
+RUNNING PIG LATIN :
+					Execute pig latin in Batch or interactive mode
+					Interactive Mode:
+					$ pig
+					... - Connecting to ...
+					grunt> A = load 'data';
+					grunt> B = ... ;
+							or
+					grunt> exec myscript.pig;
+							or
+					grunt> run myscript.pig;	
+
+					Batch Mode:
+					$ pig myscript.pig
+
+EXAMPLE:
+		Pig Latin statements that extract all user IDs from the /etc/passwd file.
+		Copy the passwd =>to local directory
+		In Interactive mode
+		type line by line
+		grunt>A = load 'passwd' using PigStorage(':');
+		grunt>B = foreach A generate $0 as id;
+		grunt>dump B;
+		grunt>store B into ‘id.out’;
+
+		
+
+
+
+
+
+
+
+
+

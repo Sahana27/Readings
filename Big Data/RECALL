@@ -1,0 +1,14 @@
+#####Big Data And Hadoop#####
+
+BIG DATA CHALLENGES
+Big data : usually includes data sets with sizes beyond the ability of commonly used software tools to capture, curate, manage, and process data within a tolerable elapsed time. Big data "size" is a constantly moving target, as of 2012 ranging from a few dozen terabytes to many petabytes of data.
+
+Problems of Big Data:
+1. Volume of Data:
+ As the volume of data is increasing day by day, the speed at which data access should be increased. But actually the speed at which data has to be fetched is decreasing slowly
+ Solution 1: Hardware: Increasing Number of memory and use powerfull parallel processing to increase the speed. 
+ Solution 2: Putting data in the memory and using grid computing ,by putting more machine to perform grid computng on data.
+ Hence both this solution increases the cost
+
+2. Hardware failure : Failure i n hardware.. has we will be using multiple hardware devices to store data
+ 

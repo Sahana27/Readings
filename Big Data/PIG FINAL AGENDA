@@ -1,0 +1,80 @@
+=======================AGENDA===========================
+
+**********************RECALL*****************************
+
+#####Big Data And Hadoop#####
+==>Big Data Problem (in brief)
+==>Replace with Hadoop( Design Principle)
+==>Hadoop Prject as a whole
+==>Map Reduce (in Brief)
+==>Data Flow in Facebook (Optional)
+
+***********************************************************
+
+********************PIG************************************
+##### PIG INTRODUCTION #####
+==>What is Pig
+==>Pig in Hadoop
+==>Pig Latin
+==>Uses of Pig
+
+##### Installation and Running Of Pig #####
+==>Installation
+==>Running Pig in local machine
+==>Running Pig in Hadoop Cluster
+==>Running Pig in Cloud
+==>Pig Command Line COnfiguration and Return Codes
+
+##### Grunt #####
+==>Pig Script in Grunt
+==>HDFS Command in Grunt
+==>Controlling Grunt
+
+##### Pig Data Model #####
+==>Types
+	=>Scalar
+	=>Complex - Null,Schema,Casts
+
+##### Pig Latin ##### with Example
+==>Comments and Case Sensitivity
+==>Input and Output
+==>Relational Operation
+==>USer Defined Functions
+
+##### Advanced Pig #####
+==>For Each
+==>Join Operation with example
+	=>cogroup
+	=>union
+	=>cross
+==>Pig with legagcy code and Map Reduce
+==>Controlling Execution
+==>PreProcessor
+==>parameter Substitution
+==>Mcros
+
+##### Development and Testing #####
+==>Development
+	=>syntax Highlight
+	=>describe
+	=>explain
+	=>illustrate
+	=>Map reduce status
+	=>Debugging Tips
+==>Testing
+	=>Pig Unit
+
+###### Evaluation and Filter Function #####
+==> Example
+
+##### Load and Store Function #####
+==>Example
+
+##### Pig with Others #####
+==>Hive
+==>Cascading
+==>No Sql
+
+
+
+

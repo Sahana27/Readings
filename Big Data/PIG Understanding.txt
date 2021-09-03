@@ -1,0 +1,51 @@
+APACHE PIG:
+Platform for analyzing large data sets
+Pig programs is that their structure is amenable to substantial parallelization, which in turns enables them to handle very large data sets.
+
+PIG'S INFRASTRUCTURE LAYER consists of compiler that produces sequences of Map-Reduce programs.
+PIG'S LANGUAGE LAYER currently consists of a textual language called PIG LATIN
+
+KEY PROPERTIES
+EASE OF PROGRAMMING :
+ Execution of parallel task is simple
+ Makes easy to write, maintain and execute.
+ 
+OPTIMIZATION OPPORTUNITIES :
+  Tasks are encoded permits the system to optimize their execution automatically
+  
+EXTENSIBILITY :
+  Users can create their own functions to do special-purpose processing.
+  
+RUNNING PIG
+Execute pig in various modes:
+Interactive Mode:
+Executed in local as well as Map/reduce mode.
+
+Batch Mode:
+Executed in local as well as Map/Reduce mode.
+
+Execution Modes
+Local Mode:
+ Require access to a single machine; 
+ all files are installed and 
+ run using your local host and file system.
+ Specify local mode using the -x flag (pig -x local).
+ Example:
+    /* local mode */
+    $ pig -x local ...
+
+Map Reduce Mode:
+ Require access to a Hadoop cluster and HDFS installation.
+ Mapreduce mode is the default mode;
+ specify it using the -x flag (pig OR pig -x mapreduce). -x is optional
+ Example:
+	/* mapreduce mode */
+	$ pig ...
+	or
+	$ pig -x mapreduce ..
+ 
+Interactive Mode:
+ Run Pig in interactive mode using the Grunt shell.
+ Invoke the Grunt shell using the "pig" command.
+ 
+

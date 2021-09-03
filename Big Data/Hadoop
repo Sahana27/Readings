@@ -1,0 +1,217 @@
+Hadoop
+
+link : http://www.sas.com/en_us/insights/big-data/hadoop.html
+
+Hadoop is an open source software framework for storing and processing big data in a distributed fashion on large cluster of commodity hardware
+
+Distributed: Data is divided and stored across multiple computers and 
+			 computations can be run in parallel across multiple connected machine
+
+Two tasks of hadoop:
+Massive data storage : store huge amount of data by breaking data into
+    				   blocks and storing it on cluster of lower-cost comodity hardware
+
+Faster processing : Hadoop processes large amounts of data in parallel  
+					across clusters of tightly connected low-cost computers for quick results.
+
+Overview of Hadoop
+In 1900 and 2000 used  search engines and indexes,to find revelant result. WHen web pages increased from dozens to millions,automation was required. Web crawler were created.
+
+Nutch =>open sorce search engine. 
+Goal : return web search realluy faster by distributing data and calculations across different computers so multiple task could be accomplished simoultaneously
+
+Google Search Engine : similiar to Nutch
+
+Yahoo continued Nutch project using google's automating distributed data storage and processing.
+Nutch was divided : crawler remained same
+Computing and processing became hadoop in 2008
+
+
+why hadoop is important?
+Top reason : abilitity to handle huge amount of data , any kind of data -			  quickly.
+
+Low Cost : open source framework is free and uses commodity hardware to 		   store large quality of data
+
+Scalability: Grow your system simply by adding more nodes.with little 	
+			 adminisration
+
+Storage Flexibility: Data need not have to be preprocessed before storing
+					 Includes unstructured data.Store as much data as u want
+
+Inherent data protection and self healing capablities: Data and application are protected against hardware fialure.If a node goes down,jobs automatically redirects to node to sure the distributed computing does not fail.
+
+##########################################################################
+Hadoop Ecosystem 
+
+link http://radar.oreilly.com/2012/02/what-is-apache-hadoop.html
+		 
+Hadoop Core Components:
+http://docs.hortonworks.com/HDPDocuments/HDP1/HDP-1.2.4/bk_getting-started-guide/content/ch_hdp1_getting_started_chp2_1.html
+
+HDFS( Storage) and MapReduce (Processing) : they are not physically separate from processing system
+
+HDFS - Hadoop Distributed File System (HDFS)
+* Provides high throughput access to data
+*limited interface for managing file systemto scale and provide high through put
+*Creates replicas of each block of data, and distributes on computers throughout a cluster to enable reliable and rapid access.
+ 
+Components of HDFS :
+Name Node: 
+		  master of system.
+		  Maintains directories and files and manages the blocks which are present on the Data Node.
+
+Data Node :
+			Slaves which are deployed on each machines and provide actual storage.
+			Responsible for serving read  write request for client
+
+Secondary NameNode: Performing periodic checkpoints.
+					if namenode fails,w e can restart with these checkpoint stored.
+
+MapReduce:
+*Framework for performing distributed data processing using Map reduce Programming paradigm
+*Each phase has map and reduce phase:
+	Map Phase :parallel,share-nothing processing of input
+	Reduce Phase :Where output of map is taken as input.
+*HDFS is storage system for both input and output of the Map Reduce jobs.
+
+Components of Map Reduce:
+Job Tracker: 
+			Master of system which manages the jobs and resource in the cluster(Task Tracker)
+			Tries to schedule each map similiar to data being processed.
+
+TaskTrckers:
+			slaves deployed on each machine.Re
+			Responsible for running map and reduce tasks as instructed by job tracker
+
+link:
+http://www.mssqltips.com/sqlservertip/3262/big-data-basics--part-6--related-apache-projects-in-hadoop-ecosystem/
+
+Pig:
+software Framework which offers a run time environment for execution of map reduce jobs on hadoop using high level scripting language called pig latin
+
+Highlight
+=>Pig is an abstraction on top of a Hadoop cluster
+=>Pig Latin queries/commands are compiled into one or more mapreduce job
+=>Like pig, apache can operate on almost any kind of data
+=>Grunt Shell for executing Pig commands
+=>DUMP and STORE -comman commands in PIG
+	DUMP =>displays result
+	STORE =>stores the result in HDFS
+=>Pig offers various built in operators,functions and other contructs for performing common operations
+
+HIVE:
+Warehouse framework facilitates the querying and managementof large dataset in HDFS
+
+HIGHLIGHT
+=>Offers a technique to map a tabular structure on to data stored in distributed storage
+=>Supports most of the data types available in many popular RDBMS
+=>Has various built in function types
+=>Querying of data from distributed and storage through a mapped tabular structure
+=>Offers various features to relational database like partitioning,indexing,external tables etc
+=>Hive manages an internal data known as Hive Metastore
+=>Written is a SQL-like language known as HiveQL
+
+Mahout
+Scalable Machine learning and data mining library
+
+HBASE :
+Distributed, versioned, column-oriented, scalable and a big data store on top of Hadoop/HDFS
+
+Highlight
+=>based on google's big table concept
+=>runs on top of HDFS
+=>Runs on cluster commodity hardware and scale linearly
+=>offers consistent reads and write
+=>easy to use JAva API
+
+Sqoop:
+tool designed for efficiently transferring data between hadoop and RDBMS
+
+Highlight
+=>Can efficiently transfer data between hDFS and RDBMS
+=>Allow importing the data into HDFS in an incremental fashion
+=>Import of Export to and from HDFS,HIVE,RDBMS
+=>Uses mapreduce to import /export data , effevtively utilizing the parallelism and fault olerance 
+=>Offers a command line commonly referred to as Sqoop command line
+
+Oozie
+Job workflow schedulingand coordination manager for managing the job executed on hadoop.
+
+Highlight
+=>include both mapreduce and non map redcude jobs
+=>Integrated with hadoop
+=>Supports various job out of the boxincluding Mapreduce,Pig,Hive,Sqoop
+=>Jobs are scheduled/recurring jobs and are executed based on scheduled frequency and availability of data
+=> jobs are organized in a DAG
+
+Zookeeper
+Open Source coordination service for distributed application
+
+Highlight:
+=>Centralized service
+=>responsible for maintaining configuration information,offering coordinationin a distributed fashion and a host capabilities
+
+Ambari
+Software framework for provisioning,managing and montoring Hadoop cluster
+
+Highlights
+=>offers centralized management of the cluster including configuration and re-configuration of service, starting and stopping cluster
+=>uses REST API's to developers for Application Integeration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+# Display usage information
+hbase> scan
+
+# Scan all rows of table 't1'
+hbase> scan 't1'
+
+# Specify a startrow, limit the result to 10 rows, and only return selected columns
+hbase> scan 't1', {COLUMNS => ['c1', 'c2'], LIMIT => 10, STARTROW => 'xyz'}
+
+# Specify a timerange
+hbase> scan 't1', {TIMERANGE => [1303668804, 1303668904]}
+
+# Specify a custom filter
+hbase> scan 't1', {FILTER => org.apache.hadoop.hbase.filter.ColumnPaginationFilter.new(1, 0)}
+
+# Disable the block cache for a specific scan (experts only)
+hbase> scan 't1', {COLUMNS => ['c1', 'c2'], CACHE_BLOCKS => false}

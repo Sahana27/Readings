@@ -1,0 +1,5 @@
+myinput = load'/user/root/wc.txt' USING TextLoader() as (myword:chararray);
+words = FOREACH myinput GENERATE FLATTEN(TOKENIZE(myword));
+grouped = GROUP words BY $0;
+counts = FOREACH grouped GENERATE group, COUNT(words);
+dump counts;
