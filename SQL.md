@@ -89,6 +89,16 @@ Note : WHERE clause is not only used in SELECT statements, it is also used in UP
 ### Text Fields vs. Numeric Fields
 * SQL requires single quotes around text values.
 * Numeric value should not be enclosed in quotes.
+
+### SQL Order by Keyword
+* **ORDER BY** keyword sort the result in ascending or descending order.
+* Syntax:
+```
+SELECT column1, column2, ... FROM table_name ORDER BY column1, column2, ... ASC|DESC;
+```
+
+
+
    
 
 
