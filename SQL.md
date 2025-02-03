@@ -36,6 +36,60 @@ To build website that shows data from database, we will need :
 * Most action you need to perform on a database are done with SQL statments
 * SQL statement, consists of keyword that are easy to understand
 
+### Database Tables
+* Database most often contains one or more tables.
+
+### Note 
+* SQL keywords are not case sensitive.
+* SQL statement requires semicolon at the end of each SQL statement.
+
+### Important SQL Commands
+* **SELECT** :  Extract data from a database
+* **UPDATE** : Updates data in a database
+* **DELETE** : deletes data from database
+* **INSERT INTO** : Insert new data into database
+* **CREATE DATABASE** : Creates a new database
+* **ALTER DATABASE** : Modifes a table
+* **DROP TABLE** : Deletes a table
+* **CREATE INDEX** : creates an index (search key)
+* **DROP INDEX** : Deletes an index
+
+### SQL Select Statement
+* Select data from database
+* Syntax
+```
+SELECT column1, column2, ... FROM table_name;
+```
+* Select ALL Columns : `SELECT * FROM Customers;`
+
+### SQL SELECT DISTINCT Statement
+* `SELECT DISTINCT` is used to return only distinct (different) values.
+* Syntax
+```
+SELECT DISTINCT column1, column2, ... FROM table_name;
+```
+* Example : `SELECT DISTINCT Country FROM Customers;`
+
+### Count Distinct
+* DISTINCT keyword in a function called COUNT
+* Syntax :
+```
+SELECT COUNT(DISTINCT Country) FROM Customers;
+```
+
+### SQL Where Clause
+* WHERE clause  is used to filter records
+* Syntax :
+```
+SELECT column1, column2, ... FROM table_name WHERE condition;
+```
+
+Note : WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.!
+
+### Text Fields vs. Numeric Fields
+* SQL requires single quotes around text values.
+* Numeric value should not be enclosed in quotes.
+   
 
 
 
